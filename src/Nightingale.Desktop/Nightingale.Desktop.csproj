@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PlatformTarget>x64</PlatformTarget>
+    <AssemblyName>Nightingale</AssemblyName>
+    <RootNamespace>Nightingale.Desktop</RootNamespace>
+    <Version>0.1.2</Version>
+    <AssemblyTitle>夜莺播放器</AssemblyTitle>
+    <Product>夜莺播放器</Product>
+    <Description>夜莺播放器 · Nightingale</Description>
+    <ApplicationIcon>../../assets/nightingale.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../Nightingale.Core/Nightingale.Core.csproj" />
+    <Resource Include="../../assets/nightingale.png" Link="Assets/nightingale.png" />
+    <Resource Include="../../assets/nightingale.ico" Link="Assets/nightingale.ico" />
+    <Content Include="../../native/mpv-2.dll" Condition="Exists('../../native/mpv-2.dll')" Link="mpv-2.dll" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

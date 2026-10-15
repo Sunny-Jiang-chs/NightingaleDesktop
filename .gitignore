@@ -1,0 +1,7 @@
+**/bin/
+**/obj/
+tmp/
+dist/
+native/*.dll
+.vs/
+*.user
